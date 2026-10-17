@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Calculadora de precios</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/epub.css" /> 
+  </head><body>
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <section id="module-calculadora">
+<span id="calculadora-de-precios"></span><h1>Calculadora de precios</h1>
+<p>Calculadora de precios: calcula el IVA y aplica descuentos.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="calculadora.aplicar_descuento">
+<span class="sig-prename descclassname"><span class="pre">calculadora.</span></span><span class="sig-name descname"><span class="pre">aplicar_descuento</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">precio</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">descuento</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Aplica un descuento a un precio.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>precio</strong> – Precio original.</p></li>
+<li><p><strong>descuento</strong> – Porcentaje de descuento.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Precio con el descuento aplicado.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="calculadora.precio_con_iva">
+<span class="sig-prename descclassname"><span class="pre">calculadora.</span></span><span class="sig-name descname"><span class="pre">precio_con_iva</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">precio</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iva</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">21</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Calcula el precio con IVA.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>precio</strong> – Precio sin IVA.</p></li>
+<li><p><strong>iva</strong> – Porcentaje de IVA (21 por defecto).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Precio con IVA.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="calculadora.precio_final">
+<span class="sig-prename descclassname"><span class="pre">calculadora.</span></span><span class="sig-name descname"><span class="pre">precio_final</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">precio</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">descuento</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iva</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">21</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Calcula el precio final aplicando primero el descuento y después el IVA.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>precio</strong> – Precio original sin IVA.</p></li>
+<li><p><strong>descuento</strong> – Porcentaje de descuento.</p></li>
+<li><p><strong>iva</strong> – Porcentaje de IVA (21 por defecto).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Precio final.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

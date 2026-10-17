@@ -1,0 +1,43 @@
+Calculadora de precios
+**********************
+
+Calculadora de precios: calcula el IVA y aplica descuentos.
+
+calculadora.aplicar_descuento(precio, descuento)
+
+   Aplica un descuento a un precio.
+
+   Parámetros:
+      * **precio** -- Precio original.
+
+      * **descuento** -- Porcentaje de descuento.
+
+   Devuelve:
+      Precio con el descuento aplicado.
+
+calculadora.precio_con_iva(precio, iva=21)
+
+   Calcula el precio con IVA.
+
+   Parámetros:
+      * **precio** -- Precio sin IVA.
+
+      * **iva** -- Porcentaje de IVA (21 por defecto).
+
+   Devuelve:
+      Precio con IVA.
+
+calculadora.precio_final(precio, descuento, iva=21)
+
+   Calcula el precio final aplicando primero el descuento y después el
+   IVA.
+
+   Parámetros:
+      * **precio** -- Precio original sin IVA.
+
+      * **descuento** -- Porcentaje de descuento.
+
+      * **iva** -- Porcentaje de IVA (21 por defecto).
+
+   Devuelve:
+      Precio final.
