@@ -1,0 +1,237 @@
+[
+    {
+        "comment": "/**\r\n * Calculadora de precios: calcula el IVA y aplica descuentos.\r\n * @module calculadora\r\n */",
+        "meta": {
+            "filename": "calculadora.js",
+            "lineno": 1,
+            "columnno": 0,
+            "path": "C:\\Users\\jjmar\\proyectos\\despliegue\\calculadora_precios\\js",
+            "code": {}
+        },
+        "description": "Calculadora de precios: calcula el IVA y aplica descuentos.",
+        "kind": "module",
+        "name": "calculadora",
+        "longname": "module:calculadora"
+    },
+    {
+        "comment": "/** Porcentaje de IVA por defecto. */",
+        "meta": {
+            "range": [
+                145,
+                153
+            ],
+            "filename": "calculadora.js",
+            "lineno": 7,
+            "columnno": 6,
+            "path": "C:\\Users\\jjmar\\proyectos\\despliegue\\calculadora_precios\\js",
+            "code": {
+                "id": "astnode100000003",
+                "name": "IVA",
+                "type": "Literal",
+                "value": 21
+            }
+        },
+        "description": "Porcentaje de IVA por defecto.",
+        "name": "IVA",
+        "longname": "module:calculadora~IVA",
+        "kind": "constant",
+        "scope": "inner",
+        "memberof": "module:calculadora",
+        "params": []
+    },
+    {
+        "comment": "/**\r\n * Calcula el precio con IVA.\r\n * @param {number} precio - Precio sin IVA.\r\n * @param {number} [iva=21] - Porcentaje de IVA.\r\n * @returns {number} Precio con IVA.\r\n */",
+        "meta": {
+            "range": [
+                332,
+                437
+            ],
+            "filename": "calculadora.js",
+            "lineno": 15,
+            "columnno": 0,
+            "path": "C:\\Users\\jjmar\\proyectos\\despliegue\\calculadora_precios\\js",
+            "code": {
+                "id": "astnode100000006",
+                "name": "precioConIva",
+                "type": "FunctionDeclaration",
+                "paramnames": [
+                    "precio",
+                    "iva"
+                ]
+            }
+        },
+        "description": "Calcula el precio con IVA.",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "Precio sin IVA.",
+                "name": "precio"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "optional": true,
+                "defaultvalue": 21,
+                "description": "Porcentaje de IVA.",
+                "name": "iva"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "Precio con IVA."
+            }
+        ],
+        "name": "precioConIva",
+        "longname": "module:calculadora~precioConIva",
+        "kind": "function",
+        "scope": "inner",
+        "memberof": "module:calculadora"
+    },
+    {
+        "comment": "/**\r\n * Aplica un descuento a un precio.\r\n * @param {number} precio - Precio original.\r\n * @param {number} descuento - Porcentaje de descuento.\r\n * @returns {number} Precio con el descuento aplicado.\r\n */",
+        "meta": {
+            "range": [
+                647,
+                762
+            ],
+            "filename": "calculadora.js",
+            "lineno": 25,
+            "columnno": 0,
+            "path": "C:\\Users\\jjmar\\proyectos\\despliegue\\calculadora_precios\\js",
+            "code": {
+                "id": "astnode100000029",
+                "name": "aplicarDescuento",
+                "type": "FunctionDeclaration",
+                "paramnames": [
+                    "precio",
+                    "descuento"
+                ]
+            }
+        },
+        "description": "Aplica un descuento a un precio.",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "Precio original.",
+                "name": "precio"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "Porcentaje de descuento.",
+                "name": "descuento"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "Precio con el descuento aplicado."
+            }
+        ],
+        "name": "aplicarDescuento",
+        "longname": "module:calculadora~aplicarDescuento",
+        "kind": "function",
+        "scope": "inner",
+        "memberof": "module:calculadora"
+    },
+    {
+        "comment": "/**\r\n * Calcula el precio final aplicando primero el descuento y después el IVA.\r\n * @param {number} precio - Precio original sin IVA.\r\n * @param {number} descuento - Porcentaje de descuento.\r\n * @param {number} [iva=21] - Porcentaje de IVA.\r\n * @returns {number} Precio final.\r\n */",
+        "meta": {
+            "range": [
+                1050,
+                1171
+            ],
+            "filename": "calculadora.js",
+            "lineno": 36,
+            "columnno": 0,
+            "path": "C:\\Users\\jjmar\\proyectos\\despliegue\\calculadora_precios\\js",
+            "code": {
+                "id": "astnode100000050",
+                "name": "precioFinal",
+                "type": "FunctionDeclaration",
+                "paramnames": [
+                    "precio",
+                    "descuento",
+                    "iva"
+                ]
+            }
+        },
+        "description": "Calcula el precio final aplicando primero el descuento y después el IVA.",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "Precio original sin IVA.",
+                "name": "precio"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "Porcentaje de descuento.",
+                "name": "descuento"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "optional": true,
+                "defaultvalue": 21,
+                "description": "Porcentaje de IVA.",
+                "name": "iva"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "Precio final."
+            }
+        ],
+        "name": "precioFinal",
+        "longname": "module:calculadora~precioFinal",
+        "kind": "function",
+        "scope": "inner",
+        "memberof": "module:calculadora"
+    },
+    {
+        "kind": "package",
+        "longname": "package:undefined",
+        "files": [
+            "C:\\Users\\jjmar\\proyectos\\despliegue\\calculadora_precios\\js\\calculadora.js"
+        ]
+    }
+]
