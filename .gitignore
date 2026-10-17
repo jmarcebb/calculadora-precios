@@ -1,0 +1,15 @@
+# Caché de Python
+__pycache__/
+*.pyc
+
+# Dependencias de Node
+node_modules/
+
+# Archivos temporales de Sphinx
+.doctrees/
+.buildinfo
+python/sphinx/build/
+
+# phpDocumentor
+.phpdoc/
+phpDocumentor.phar
