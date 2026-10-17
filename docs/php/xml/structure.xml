@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<project name="Documentation">
+                <file path="php/calculadora.php" hash="707031d0f4a459e1ef2e42f5babf73e5">
+            <docblock line="0">
+    <description>Calculadora de precios: calcula el IVA y aplica descuentos.</description>
+    <long-description></long-description>
+                    <tag
+                name="package"
+                description="Calculadora"
+                                                                                                />
+            </docblock>
+
+
+            
+            
+
+            
+                                        <function namespace="\" line="15" package="\Calculadora" returnByReference="false">
+                    <name>precioConIva</name>
+                    <full_name>\precioConIva()</full_name>
+                    <docblock line="15">
+    <description>Calcula el precio con IVA.</description>
+    <long-description></long-description>
+                    <tag
+                name="package"
+                description="Calculadora"
+                                                                                                />
+                            <tag
+                name="param"
+                description="Precio sin IVA."
+                                                                 variable="precio"                                 type="float"/>
+                <tag
+                name="param"
+                description="Porcentaje de IVA (21 por defecto)."
+                                                                 variable="iva"                                 type="float"/>
+                            <tag
+                name="return"
+                description="Precio con IVA."
+                                                                                                 type="float"/>
+                        </docblock>
+
+                                            <argument line="15" by_reference="false">
+    <name>precio</name>
+    <default></default>
+    <type>float</type>
+</argument>
+
+                                            <argument line="15" by_reference="false">
+    <name>iva</name>
+    <default>21</default>
+    <type>float</type>
+</argument>
+
+                                    </function>
+                            <function namespace="\" line="27" package="\Calculadora" returnByReference="false">
+                    <name>aplicarDescuento</name>
+                    <full_name>\aplicarDescuento()</full_name>
+                    <docblock line="27">
+    <description>Aplica un descuento a un precio.</description>
+    <long-description></long-description>
+                    <tag
+                name="package"
+                description="Calculadora"
+                                                                                                />
+                            <tag
+                name="param"
+                description="Precio original."
+                                                                 variable="precio"                                 type="float"/>
+                <tag
+                name="param"
+                description="Porcentaje de descuento."
+                                                                 variable="descuento"                                 type="float"/>
+                            <tag
+                name="return"
+                description="Precio con el descuento aplicado."
+                                                                                                 type="float"/>
+                        </docblock>
+
+                                            <argument line="27" by_reference="false">
+    <name>precio</name>
+    <default></default>
+    <type>float</type>
+</argument>
+
+                                            <argument line="27" by_reference="false">
+    <name>descuento</name>
+    <default></default>
+    <type>float</type>
+</argument>
+
+                                    </function>
+                            <function namespace="\" line="40" package="\Calculadora" returnByReference="false">
+                    <name>precioFinal</name>
+                    <full_name>\precioFinal()</full_name>
+                    <docblock line="40">
+    <description>Calcula el precio final aplicando primero el descuento y después el IVA.</description>
+    <long-description></long-description>
+                    <tag
+                name="package"
+                description="Calculadora"
+                                                                                                />
+                            <tag
+                name="param"
+                description="Precio original sin IVA."
+                                                                 variable="precio"                                 type="float"/>
+                <tag
+                name="param"
+                description="Porcentaje de descuento."
+                                                                 variable="descuento"                                 type="float"/>
+                <tag
+                name="param"
+                description="Porcentaje de IVA (21 por defecto)."
+                                                                 variable="iva"                                 type="float"/>
+                            <tag
+                name="return"
+                description="Precio final."
+                                                                                                 type="float"/>
+                        </docblock>
+
+                                            <argument line="40" by_reference="false">
+    <name>precio</name>
+    <default></default>
+    <type>float</type>
+</argument>
+
+                                            <argument line="40" by_reference="false">
+    <name>descuento</name>
+    <default></default>
+    <type>float</type>
+</argument>
+
+                                            <argument line="40" by_reference="false">
+    <name>iva</name>
+    <default>21</default>
+    <type>float</type>
+</argument>
+
+                                    </function>
+            
+                        
+                        
+                        
+                        
+            
+            <parse_markers></parse_markers>
+        </file>
+    
+            <namespace name="\" full_name="\" />
+
+    </project>
