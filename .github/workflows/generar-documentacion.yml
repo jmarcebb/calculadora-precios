@@ -1,0 +1,35 @@
+name: Generar documentación
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [develop]
+    paths:
+      - "python/**"
+      - "js/**"
+      - "php/**"
+
+permissions:
+  contents: write
+
+jobs:
+  documentacion:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Obtener repositorio
+        uses: actions/checkout@v7
+
+      - name: Generar la documentación
+        uses: ./.github/actions/generar-documentacion
+
+      - name: Subir la documentación al repositorio
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs
+          if git diff --cached --quiet; then
+            echo "La documentación no ha cambiado"
+          else
+            git commit -m "docs: actualizar la documentación técnica"
+            git push
+          fi
