@@ -1,0 +1,49 @@
+name: Comprobar documentación
+
+on: workflow_dispatch
+
+permissions:
+  contents: read
+
+jobs:
+  documentacion:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar código
+        uses: actions/checkout@v7
+
+      - name: Preparar PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.3"
+
+      - name: Preparar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Versiones
+        run: |
+          php -v
+          node --version
+
+      - name: Comprobar con la terminal
+        run: |
+          for archivo in README.md LICENSE CONTRIBUTING.md; do
+            if [ -f "$archivo" ]; then
+              echo "Existe $archivo"
+            else
+              echo "::error::Falta $archivo"
+              exit 1
+            fi
+          done
+
+      - name: Comprobar con PHP
+        if: ${{ !cancelled() }}
+        run: |
+          php -r 'foreach (["README.md", "LICENSE", "CONTRIBUTING.md"] as $f) { if (!file_exists($f)) { echo "::error::Falta $f\n"; exit(1); } echo "Existe $f\n"; }'
+
+      - name: Comprobar con Node
+        if: ${{ !cancelled() }}
+        run: |
+          node -e 'for (const f of ["README.md", "LICENSE", "CONTRIBUTING.md"]) { if (!require("fs").existsSync(f)) { console.log("::error::Falta " + f); process.exit(1); } console.log("Existe " + f); }'
