@@ -1,0 +1,38 @@
+name: Generar documentación
+description: Genera la documentación técnica de la calculadora con Sphinx, JSDoc y phpDocumentor
+runs:
+  using: composite
+  steps:
+    - name: Preparar Python
+      uses: actions/setup-python@v7
+      with:
+        python-version: "3.x"
+
+    - name: Preparar PHP con phpDocumentor
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: "8.3"
+        tools: phpDocumentor
+
+    - name: Preparar Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: "22"
+
+    - name: Instalar Sphinx y JSDoc
+      shell: bash
+      run: |
+        pip install sphinx
+        npm install -g jsdoc
+
+    - name: Documentación de Python con Sphinx
+      shell: bash
+      run: python -m sphinx -b html python/sphinx/source docs/python/html
+
+    - name: Documentación de JavaScript con JSDoc
+      shell: bash
+      run: jsdoc js/calculadora.js -d docs/js/html
+
+    - name: Documentación de PHP con phpDocumentor
+      shell: bash
+      run: phpDocumentor run -d php -t docs/php/html
