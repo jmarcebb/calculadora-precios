@@ -1,4 +1,7 @@
-"""Calculadora de precios: calcula el IVA y aplica descuentos."""
+"""Calculadora de precios: calcula el IVA y aplica descuentos.
+
+Todos los precios se redondean a dos decimales.
+"""
 
 IVA = 21
 
